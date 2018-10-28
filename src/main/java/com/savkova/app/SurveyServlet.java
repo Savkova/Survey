@@ -12,14 +12,9 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Map;
 
-@WebServlet(name = "Survey", urlPatterns = "/")
+@WebServlet(name = "Survey", urlPatterns = "/form")
 public class SurveyServlet extends HttpServlet
 {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-    {
-        request.getRequestDispatcher("/WEB-INF/survey.jsp").forward(request, response);
-    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -43,7 +38,7 @@ public class SurveyServlet extends HttpServlet
 
         request.setAttribute("totalVoted", answerMap.size());
         request.setAttribute("statistics", AgeGroup.values());
-        request.getRequestDispatcher("/WEB-INF/report.jsp").forward(request, response);
+        request.getRequestDispatcher("report.jsp").forward(request, response);
     }
 
     private void countRating(Person person, Answer[] answers)
@@ -69,7 +64,7 @@ public class SurveyServlet extends HttpServlet
         }
     }
 
-    public enum AgeGroup
+    private enum AgeGroup
     {
         AGE_GROUP25(0, 25),
         AGE_GROUP35(25, 35),

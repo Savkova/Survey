@@ -6,7 +6,7 @@
 <body>
 <h1>Survey research</h1>
 
-<form action="/survey" method="post">
+<form action="form" method="post">
 
     <p><strong>First name:</strong></p>
     <input type="text" name="name">
@@ -15,7 +15,7 @@
     <input type="text" name="surname">
 
     <p><strong>Year of Birth:</strong></p>
-    <input type="number" name="year" min="1900" value="0">
+    <input type="number" name="year" min="1900" value="1900">
 
     <p><strong>How would you rate our product?</strong></p>
     <input type="radio" name="q1" value="10"> low
