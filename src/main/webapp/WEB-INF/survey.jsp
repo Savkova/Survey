@@ -9,13 +9,13 @@
 <form action="form" method="post">
 
     <p><strong>First name:</strong></p>
-    <input type="text" name="name">
+    <input required type="text" name="name">
 
     <p><strong>Last name: </strong></p>
-    <input type="text" name="surname">
+    <input required type="text" name="surname">
 
     <p><strong>Year of Birth:</strong></p>
-    <input type="number" name="year" min="1900" value="1900">
+    <input required type="number" name="year" min="1900" value="1900">
 
     <p><strong>How would you rate our product?</strong></p>
     <input type="radio" name="q1" value="10"> low
