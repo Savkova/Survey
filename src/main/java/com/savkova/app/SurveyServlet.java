@@ -64,7 +64,7 @@ public class SurveyServlet extends HttpServlet
         }
     }
 
-    public enum AgeGroup
+    private enum AgeGroup
     {
         AGE_GROUP25(0, 25),
         AGE_GROUP35(25, 35),
