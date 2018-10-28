@@ -38,13 +38,14 @@ public class SurveyServlet extends HttpServlet
 
         request.setAttribute("totalVoted", answerMap.size());
         request.setAttribute("statistics", AgeGroup.values());
-        request.getRequestDispatcher("report.jsp").forward(request, response);
+
+        request.getRequestDispatcher("/WEB-INF/report.jsp").forward(request, response);
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-        request.getRequestDispatcher("survey.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/survey.jsp").forward(request, response);
     }
 
     private void countRating(Person person, Answer[] answers)
