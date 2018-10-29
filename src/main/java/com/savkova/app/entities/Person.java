@@ -2,19 +2,21 @@ package com.savkova.app.entities;
 
 import java.time.LocalDate;
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Person
 {
+    private final static AtomicInteger counter = new AtomicInteger();
+
     private final int id;
     private final String name;
     private final String surname;
     private final int yearOfBirth;
 
-    private static int count;
 
     public Person(final String name, final String surname, final int year)
     {
-        this.id = ++count;
+        this.id = counter.incrementAndGet();
         this.name = name;
         this.surname = surname;
 
