@@ -5,10 +5,10 @@ import java.util.Objects;
 
 public class Person
 {
-    private int id;
-    private String name;
-    private String surname;
-    private int yearOfBirth;
+    private final int id;
+    private final String name;
+    private final String surname;
+    private final int yearOfBirth;
 
     private static int count;
 
